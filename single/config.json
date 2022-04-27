@@ -1,0 +1,68 @@
+{
+  "threads": 3,
+  "QP": {
+    "mode": "P",
+    "thresholds": [
+      {
+        "count": 500,
+        "score": 4900
+      },
+      {
+        "count": 1000,
+        "score": 5000
+      },
+      {
+        "count": 10000,
+        "score": 5300
+      }
+    ]
+  },
+  "QD": {
+    "mode": "P",
+    "thresholds": [
+      {
+        "count": 500,
+        "score": 4500
+      },
+      {
+        "count": 1000,
+        "score": 5000
+      },
+      {
+        "count": 10000,
+        "score": 6000
+      }
+    ]
+  },
+  "PP": {
+    "mode": "P",
+    "thresholds": [
+      {
+        "count": 1000,
+        "score": 7800,
+        "skill": true
+      },
+      {
+        "count": 10000,
+        "score": 8000
+      }
+    ]
+  },
+  "PD": {
+    "mode": "F",
+    "thresholds": [
+      {
+        "count": 500,
+        "score": 8000
+      },
+      {
+        "count": 1000,
+        "score": 8500
+      },
+      {
+        "count": 10000,
+        "score": 9000
+      }
+    ]
+  }
+}

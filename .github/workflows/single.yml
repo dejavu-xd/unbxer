@@ -1,0 +1,40 @@
+name: Single unbox
+
+on:
+  workflow_dispatch:
+    inputs:
+      box:
+        description: 'Box URL'
+        required: true
+      id:
+        description: 'Box ID'
+        required: true
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    
+    - name: unbox
+      run: |
+        echo "RUNID=${{ github.event.inputs.id }}" >> $GITHUB_ENV
+        npm i
+        node single/index.js "${{ github.event.inputs.box }}" 2>> error
+
+    - name: upload data.db
+      uses: actions/upload-artifact@v2
+      with:
+        name: data-${{ env.RUNID }}.db
+        path: data.db
+
+    - name: upload error
+      uses: actions/upload-artifact@v2
+      with:
+        name: error
+        path: error

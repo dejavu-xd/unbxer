@@ -1,0 +1,101 @@
+CREATE TABLE IF NOT EXISTS 'name' (
+	'name' VARCHAR NOT NULL UNIQUE,
+	'QP' INTEGER,
+	'QP_endpoint' INTEGER,
+	'QD' INTEGER,
+	'QD_endpoint' INTEGER,
+	'PP' INTEGER,
+	'PP_endpoint' INTEGER,
+	'PD' INTEGER,
+	'PD_endpoint' INTEGER,
+	'mark' VARCHAR,
+	'HP' INTEGER,
+	'ATK' INTEGER,
+	'DEF' INTEGER,
+	'SPD' INTEGER,
+	'AGL' INTEGER,
+	'MAG' INTEGER,
+	'MDF' INTEGER,
+	'ITL' INTEGER,
+	'has_skillinfo' BOOLEAN,
+	'skill_0' INTEGER,
+	'skill_1' INTEGER,
+	'skill_2' INTEGER,
+	'skill_3' INTEGER,
+	'skill_4' INTEGER,
+	'skill_5' INTEGER,
+	'skill_6' INTEGER,
+	'skill_7' INTEGER,
+	'skill_8' INTEGER,
+	'skill_9' INTEGER,
+	'skill_10' INTEGER,
+	'skill_11' INTEGER,
+	'skill_12' INTEGER,
+	'skill_13' INTEGER,
+	'skill_14' INTEGER,
+	'skill_15' INTEGER,
+	'skill_16' INTEGER,
+	'skill_17' INTEGER,
+	'skill_18' INTEGER,
+	'skill_19' INTEGER,
+	'skill_20' INTEGER,
+	'skill_21' INTEGER,
+	'skill_22' INTEGER,
+	'skill_23' INTEGER,
+	'skill_24' INTEGER,
+	'skill_25' INTEGER,
+	'skill_26' INTEGER,
+	'skill_27' INTEGER,
+	'skill_28' INTEGER,
+	'skill_29' INTEGER,
+	'skill_30' INTEGER,
+	'skill_31' INTEGER,
+	'skill_32' INTEGER,
+	'skill_33' INTEGER,
+	'skill_34' INTEGER,
+	'skill_35' INTEGER,
+	'skill_36' INTEGER,
+	PRIMARY KEY('name')
+);
+
+CREATE TABLE IF NOT EXISTS 'duo' (
+	'P1' VARCHAR NOT NULL,
+	'P2' VARCHAR NOT NULL,
+	'QP' INTEGER,
+	'QP_endpoint' INTEGER,
+	'PP' INTEGER,
+	'PP_endpoint' INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS 'triple' (
+	'P1' VARCHAR NOT NULL,
+	'P2' VARCHAR NOT NULL,
+	'P3' VARCHAR NOT NULL,
+	'QP' INTEGER,
+	'QP_endpoint' INTEGER,
+	'PP' INTEGER,
+	'PP_endpoint' INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS 'quad' (
+	'P1' VARCHAR NOT NULL,
+	'P2' VARCHAR NOT NULL,
+	'P3' VARCHAR NOT NULL,
+	'P4' VARCHAR NOT NULL,
+	'QP' INTEGER,
+	'QP_endpoint' INTEGER,
+	'PP' INTEGER,
+	'PP_endpoint' INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS 'penta' (
+	'P1' VARCHAR NOT NULL,
+	'P2' VARCHAR NOT NULL,
+	'P3' VARCHAR NOT NULL,
+	'P4' VARCHAR NOT NULL,
+	'P5' VARCHAR NOT NULL,
+	'QP' INTEGER,
+	'QP_endpoint' INTEGER,
+	'PP' INTEGER,
+	'PP_endpoint' INTEGER
+);
